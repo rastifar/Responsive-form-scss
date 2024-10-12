@@ -1,0 +1,62 @@
+@mixin layout($width, $auto, $bgColor: false) {
+  width: $width;
+  margin: 10px $auto;
+  @if $bgColor != false {
+    background-color: $bgColor;
+  }
+}
+@mixin col($colWidth){
+    width:$colWidth;
+    
+}
+@mixin labelStyle {
+  display: block;
+  margin: 14px 3% ;
+  padding: 4px;
+}
+@mixin inputStyle($inputWidth) {
+  width: $inputWidth;
+  min-height: 24px;
+  margin: 2px 3% ;
+  border-radius: 5px;
+  padding: 4px;
+  @content;
+}
+
+@mixin mediaQuery($maxWidth, $fontSize) {
+  @media (min-width:#{$maxWidth}px) {
+      body{
+        font-size: #{$fontSize};
+      }
+    
+  }
+}
+
+@mixin makeBorder($errColor) {
+    border:1px solid $errColor;
+    
+}
+@mixin errorMsg {
+   color:$errColor;
+   margin:1px 3%;
+}
+
+@mixin modal{
+  border:1px solid black;
+  border-radius: 5px;
+  background-color: rgb(252, 252, 178);
+  position: absolute;
+  top:20%;
+  width: 80%;
+  min-height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // transition: 1s ease 1s;
+
+}
+@mixin makeHidden {
+  pointer-events: none;
+  opacity: 0;
+  
+}

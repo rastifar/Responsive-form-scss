@@ -1,0 +1,55 @@
+@import 'mixin';
+@import 'variable';
+@import 'button';
+
+*{
+    margin:0;
+    padding:0;
+    font-size: $fontSize/3;
+}
+
+body{
+    font-family: $fontFamily;
+    font-size: $fontSize/3;
+}
+
+.container{
+   @include layout(80%,auto)
+}
+.form{
+    @include layout(100%,auto,lightgray);
+    overflow : hidden;
+}
+.col{
+    @include col($colWidth);
+}
+label{
+    @include labelStyle;
+}
+
+input,textarea,#country{   
+    @include inputStyle($inputWidth){
+        // font-size: $fontSize/3.5;
+     }
+}
+small{
+    @include errorMsg;
+}
+
+button{
+    @include btnStyle(75px){
+        margin:10px 3%;
+    }
+}
+.redBorder{
+    @include makeBorder($errColor);
+}
+.modalContainer{
+    @include modal;
+}
+.hide{
+    @include makeHidden;
+}
+@each $maxWidth,$fontSize in $mediaQuery{
+    @include mediaQuery($maxWidth,$fontSize)
+}

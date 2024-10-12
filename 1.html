@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./app/1.css" />
+    <title>1</title>
+  </head>
+  <body>
+    <div class="container">
+     
+      <form class="form">
+        <div class="col">
+          <div class="modalContainer hide">
+            <div class="modal"> 
+              <h1>Your information was successfully registerd! <br>
+              You will be redirected in 8 seconds</h1>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <label for="fistName">First Name</label>
+          <input
+            type="text"
+            
+            placeholder="Your Name..."
+            id="fistName"/>
+          <small class="small small-firstname"></small>
+        </div>
+        <div class="col">
+          <label for="lastName">Last Name</label>
+          <input
+            type="text"            
+            placeholder="Last Last Name..."
+            id="lastName"/>
+          <small class="small small-lastname"></small>
+        </div>
+        <div class="col">
+          <label>Country</label>
+          <!-- <input  id="fistName"> -->
+          <select id="country" name="country">
+            <option value="Austrlia">Austrlia</option>
+            <option value="Africa">Africa</option>
+            <option value="Asia">Asia</option>
+            <option value="America">America</option>
+            <option value="Euroup">Euroup</option>
+          </select>
+        </div>
+        <div class="col">
+          <label for="subject">Subject</label>
+          <textarea
+            id="subject"
+            placeholder="Write something"
+            rows="6"
+            cols="50"
+          ></textarea>
+        </div>
+        <button id="submit">Submit</button>
+      </form>
+    </div>
+
+   
+    <script src="./1.js"></script>
+  </body>
+</html>
+
+<!-- git push -u origin main -->

@@ -1,0 +1,11 @@
+@import 'variable';
+
+@mixin btnStyle($width){
+    width: $width;
+    height: 35px;
+    background-color: $btnColor;
+    border-radius: 5px;
+    padding:3px;
+    font-weight: bold;
+   @content;
+}

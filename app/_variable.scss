@@ -1,0 +1,17 @@
+// $fontSizeLg :3rem;
+// $fontSizeMd :2rem;
+// $fontSizeSm :1rem;
+$fontSize:3rem;
+$fontFamily:Tahoma;
+$inputWidth :100%;
+$colWidth : 90%;
+$mediaQuery:(
+    320:$fontSize/3.5,
+    640:$fontSize/3.5,
+    768:$fontSize/3.5,
+    1024:$fontSize/3,
+    1200:$fontSize/3
+);
+
+$btnColor:rgb(41, 172, 117);
+$errColor:red;
